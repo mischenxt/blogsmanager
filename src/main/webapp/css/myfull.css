@@ -1,0 +1,12 @@
+@CHARSET "UTF-8";
+.CodeMirror-fullscreen {
+
+    z-index: 10000;
+}
+
+
+.editor-toolbar.fullscreen {
+
+    z-index: 10000;
+
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <title>smartBlogs</title>
+    <meta
+            content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+            name="viewport">
+    <!-- Bootstrap 3.3.7 -->
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css"
+          rel="stylesheet" th:href="@{bower_components/bootstrap/dist/css/bootstrap.min.css}">
+    <!-- Font Awesome -->
+    <link href="../bower_components/font-awesome/css/font-awesome.min.css"
+          rel="stylesheet" th:href="@{bower_components/font-awesome/css/font-awesome.min.css}">
+    <!-- Ionicons -->
+    <link href="../bower_components/Ionicons/css/ionicons.min.css"
+          rel="stylesheet" th:href="@{bower_components/Ionicons/css/ionicons.min.css}">
+    <!-- Theme style -->
+    <link href="../dist/css/AdminLTE.min.css" rel="stylesheet" th:href="@{dist/css/AdminLTE.min.css}">
+    <!-- iCheck -->
+    <link href="../plugins/iCheck/square/blue.css" rel="stylesheet" th:href="@{plugins/iCheck/square/blue.css}">
+    <link href="../css/layout.css" rel="stylesheet" th:href="@{css/layout.css}" type="text/css"/>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic"
+          rel="stylesheet">
+</head>
+<body class="hold-transition login-page">
+<div class="login-box">
+    <div class="login-logo">
+        <b>Smart</b>Blogs
+    </div>
+    <div class="login-box-body">
+        <p class="login-box-msg">注册</p>
+        <!-- 表单开始 -->
+        <form action="login.html" id="myform" method="post"
+              th:action="@{register.do}">
+            <div class="form-group has-feedback">
+                <!-- 用户名 -->
+                <input class="form-control" id="username" name="username"
+                       placeholder="用户名" type="text"> <span
+                    class="glyphicon glyphicon-user form-control-feedback"></span>
+            </div>
+            <!-- 电子邮箱 -->
+            <div class="form-group has-feedback">
+                <input class="form-control" id="useremail" name="useremail"
+                       placeholder="电子邮箱" type="text"> <span
+                    class="glyphicon glyphicon-envelope form-control-feedback"></span>
+            </div>
+            <!-- 密码 -->
+            <div class="form-group has-feedback">
+                <input class="form-control" id="pwd" name="pwd" placeholder="密码"
+                       type="password"> <span
+                    class="glyphicon glyphicon-lock form-control-feedback"></span>
+            </div>
+            <!-- 确认密码 -->
+            <div class="form-group has-feedback">
+                <input class="form-control" id="repwd" name="repwd" placeholder="确认密码"
+                       type="password"> <span
+                    class="glyphicon glyphicon-lock form-control-feedback"></span>
+            </div>
+            <div id="msgsp"></div>
+            <div class="row">
+                <div class="col-xs-8"></div>
+                <!-- /.col -->
+                <div class="col-xs-4">
+                    <button class="btn btn-primary btn-block btn-flat subreg"
+                            type="button">注册
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- 注册页脚 -->
+    <div class="lockscreen-footer text-center">
+        Copyright © 2018 Tedu.cn All Rights Reserved<br/>
+        <small>京ICP备08000853号-56
+            <a href="http://www.tedu.cn/" style="font-size: 12px">达内时代科技集团有限公司</a>
+            版权所有
+        </small>
+    </div>
+</div>
+<!-- jQuery 3 -->
+<script src="../bower_components/jquery/dist/jquery.min.js"
+        th:src="@{bower_components/jquery/dist/jquery.min.js}"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"
+        th:src="@{bower_components/bootstrap/dist/js/bootstrap.min.js}"></script>
+<!-- iCheck -->
+<script src="../plugins/iCheck/icheck.min.js" th:src="@{plugins/iCheck/icheck.min.js}"></script>
+<script src="../js/loginreg.js" th:src="@{js/loginreg.js}"></script>
+<script>
+    $(function () {
+        $('input').iCheck({
+            checkboxClass: 'icheckbox_square-blue',
+            radioClass: 'iradio_square-blue',
+            increaseArea: '20%' /* optional */
+        });
+    });
+</script>
+</body>
+</html>

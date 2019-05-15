@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+
+    <bean class="controller.LoginController"/>
+
+    <bean class="controller.ArticleController"/>
+
+    <bean class="controller.UserController"/>
+
+    <bean class="controller.CommentController"/>
+
+    <bean class="controller.TagController"/>
+
+    <bean class="controller.LinkController"/>
+
+    <bean class="controller.OptionController"/>
+
+
+</beans>
